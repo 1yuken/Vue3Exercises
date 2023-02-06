@@ -6,7 +6,11 @@
     attr: 'omen.png',
     text: 'page',
 		            href: 'page.html',
-	      }
+                num: 5,
+    num1: 1,
+		num2: 2,
+		num3: 3,
+	}
 }
   }
 </script>
@@ -22,6 +26,7 @@
   <img :src="attr">
   <div> <p> My name is {{ name }}</p>
     <p>Solve this problem <a href="page.html">here</a></p>
+    <p class="sc">Квадрат неизвестного num равен {{num*num}}, А сумма num1,num2,num3 равна {{num1+num2+num3}}.</p>
   </div>
 </template>
 

@@ -19,6 +19,9 @@
 methods: { 
  show: function() { 
   alert(today); 
+ },
+ summ: function() {
+  alert(this.num1 + this.num2)
  }
 }
 }
@@ -34,11 +37,13 @@ methods: {
   <br>
   <br>
   <img :src="attr">
-  <div> <p> My name is {{ name }}</p>
-    <p>Solve this problem <a href="page.html">here</a></p>
+  <div> <p> I'm {{ name }}</p>
+    <p>Solve this task for me<a href="page.html">here</a></p>
     <p class="sc">Квадрат неизвестного num равен {{num*num}}, А сумма num1,num2,num3 равна {{num1+num2+num3}}.</p>
     <p class="sc">Выведем каждую букву массива в отдельном абзаце: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br> Теперь выведем сумму элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
     <p class="sc">Выведем сумму элементов объекта obj : {{obj.x + obj.y + obj.z}} </p>
+    <button class="button button1" @click="show">Узнать дату(нажать)</button> <br> 
+    <button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> 
   </div>
 </template>
 

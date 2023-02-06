@@ -12,9 +12,17 @@
                 num3: 3,
     arr1: ['x', 'y', 'z'], 
     arr2: [1, 2, 3], 
+    obj: {x: 1, y: 2, z: 3}, 
 	      }   
+},
+
+methods: { 
+ show: function() { 
+  alert(today); 
+ }
 }
-  }
+}
+  let today = new Date(); 
 </script>
 
 <template>
@@ -29,7 +37,8 @@
   <div> <p> My name is {{ name }}</p>
     <p>Solve this problem <a href="page.html">here</a></p>
     <p class="sc">Квадрат неизвестного num равен {{num*num}}, А сумма num1,num2,num3 равна {{num1+num2+num3}}.</p>
-    <p class="sc"> Выведем каждую букву массива в отдельном абзаце: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br> Теперь выведем сумму элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
+    <p class="sc">Выведем каждую букву массива в отдельном абзаце: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br> Теперь выведем сумму элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
+    <p class="sc">Выведем сумму элементов объекта obj : {{obj.x + obj.y + obj.z}} </p>
   </div>
 </template>
 

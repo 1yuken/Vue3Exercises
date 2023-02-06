@@ -1,10 +1,12 @@
 <script>
   export default {
     data() {
-	return {
-		name: 'Valorant',
-		surn: 'Omen',
-	}
+	      return {
+                name: 'Omen',
+    attr: 'omen.png',
+    text: 'page',
+		            href: 'page.html',
+	      }
 }
   }
 </script>
@@ -14,7 +16,12 @@
 		<h1> Vue exercises </h1>
 	</div>
   <br>
-  <div> <p> {{ name }} {{ surn }}</p>
+  <br>
+  <br>
+  <br>
+  <img :src="attr">
+  <div> <p> My name is {{ name }}</p>
+    <p>Solve this problem <a href="page.html">here</a></p>
   </div>
 </template>
 
@@ -22,11 +29,13 @@
 header {
   line-height: 1.5;
 }
+
+
 p {
   line-height: 2.5;
   font-size: large;
   letter-spacing: 2px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: rgb(34, 35, 92);
 }
 .logo {

@@ -33,32 +33,33 @@ methods: {
 		<h1> Vue exercises </h1>
 	</div>
   <br>
-  <br>
-  <br>
-  <br>
   <img :src="attr">
   <div> <p> I'm {{ name }}</p>
-    <p>Solve this task for me<a href="page.html">here</a></p>
+    <p>Solve this task for me <a href="page.html">here</a></p>
     <p class="sc">Квадрат неизвестного num равен {{num*num}}, А сумма num1,num2,num3 равна {{num1+num2+num3}}.</p>
     <p class="sc">Выведем каждую букву массива в отдельном абзаце: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br> Теперь выведем сумму элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
     <p class="sc">Выведем сумму элементов объекта obj : {{obj.x + obj.y + obj.z}} </p>
-    <button class="button button1" @click="show">Узнать дату(нажать)</button> <br> 
-    <button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> 
+    <button class="button button1" @click="show">Узнать дату по нажатию</button>
+    <button class="button button2" @mouseenter="show"> Узнать дату по наведению</button> 
   </div>
 </template>
 
 <style >
+
 header {
   line-height: 1.5;
 }
-
+.sc {
+  font-size: medium;
+ color: #22235c;
+}
 
 p {
   line-height: 2.5;
   font-size: large;
   letter-spacing: 2px;
   font-family: 'Montserrat', sans-serif;
-  color: rgb(34, 35, 92);
+  color: #22235c;
 }
 .logo {
   display: block;

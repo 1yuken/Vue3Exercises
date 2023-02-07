@@ -13,6 +13,7 @@
     arr1: ['x', 'y', 'z'], 
     arr2: [1, 2, 3], 
     obj: {x: 1, y: 2, z: 3}, 
+    date : '2',
 	      }   
 },
 
@@ -22,10 +23,18 @@ methods: {
  },
  summ: function() {
   alert(this.num1 + this.num2)
- }
+ },
+data: function(){
+let date = this.dayOfWeek(this.date);
+alert(date);
+},
+dayOfWeek: function(date){
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+return days[date-1];
+},
 }
 }
-  let today = new Date(); 
+let today = new Date(); 
 </script>
 
 <template>
@@ -40,7 +49,8 @@ methods: {
     <p class="sc">Выведем каждую букву массива в отдельном абзаце: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br> Теперь выведем сумму элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
     <p class="sc">Выведем сумму элементов объекта obj : {{obj.x + obj.y + obj.z}} </p>
     <button class="button button1" @click="show">Узнать дату по нажатию</button>
-    <button class="button button2" @mouseenter="show"> Узнать дату по наведению</button> 
+    <button class="button button2" @mouseenter="show"> Узнать дату по наведению</button>
+    <button class="button button1" @click="data">Узнать дату по нажатию( {{ date }} )</button>
   </div>
 </template>
 

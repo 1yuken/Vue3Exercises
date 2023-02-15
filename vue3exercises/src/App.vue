@@ -2,7 +2,11 @@
 export default {
   data() {
     return {
-      arr: ['x', 'y', 'z'],
+      data: {
+      user1: '100$',
+      user2: '200$',
+      user3: '300$',
+      }
     }
   },
   methods: {
@@ -10,5 +14,20 @@ export default {
 }
 </script>
 <template>
-  <p v-for="(elem, key) in arr">{{ key }}:&nbsp {{ elem }}</p>
+  <ul>
+    Task 1
+    <li v-for="value in data">{{ value }}</li>
+  </ul>
+  <ul>
+    Task 2
+    <li v-for="(value, key) in data">{{ key }} - {{ value }}</li>
+  </ul>
+  <ul>
+    Task 3
+    <li v-for="(value, key, index) in data">{{ key }} - {{ value }} - {{ index }}</li>
+  </ul>
+  <ul>
+    Task 4
+    <li v-for="(value, key, index) in data">{{ key }} - {{ value }} - {{ index + 1 }}</li>
+  </ul>
 </template>

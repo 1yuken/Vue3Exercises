@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      visibility: true,
+      visibility: false,
     }
   },
   methods: {
@@ -13,10 +13,6 @@ export default {
 }
 </script>
 <template>
-  <div v-if="visibility">
-  <p>yuken</p>
-  <p>yuken2</p>
-  <p>yuken3</p>
-  </div><br>
+  <p v-show="visibility">yuken</p><br>
   <button @click="toggle">Toggle</button>
 </template>

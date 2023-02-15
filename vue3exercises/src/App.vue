@@ -34,7 +34,14 @@ export default {
   <button @click.once="delSecondToLast">Task 4</button>
   <button @click.once="sortArr">Task 5</button>
   <button @click.once="reverseOrder">Task 6</button>
-  <ul v-for="elem in arr">
-    <li>{{ elem }}</li>
-  </ul><br>
+  <div class="red-box">
+    <ul v-for="elem in arr">
+      <li>{{ elem }}</li>
+    </ul><br>
+  </div>
 </template>
+<style>
+.red-box {
+  border: 5px solid white;
+}
+</style>

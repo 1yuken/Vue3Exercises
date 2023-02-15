@@ -2,22 +2,16 @@
 export default {
   data() {
     return {
-      cost: 50,
-      amount: 3,
-      price: 'Press to compute the price',
     }
   },
   methods: {
-    computePrice: function() {
-      this.price = (this.cost * this.amount);
+    alyarm: function() {
+      alert(`This will only be shown once`);
     }
   }
 }
 </script>
 <template>
-  <h3>Enter number for cost:</h3>
-  <input type="number" v-model.number="cost" ref="costField">
-  <h3>Enter number for amount:</h3>
-  <input type="number" v-model.number="amount" ref="amountField">
-  <button @click="computePrice">{{ price }}</button>
+  <a href.prevent="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">Link</a><br>
+  <button @click.once="alyarm">Button</button>
 </template>

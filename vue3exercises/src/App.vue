@@ -2,16 +2,18 @@
 export default {
   data() {
     return {
+      visibility: false,
     }
   },
   methods: {
-    alyarm: function() {
-      alert(`This will only be shown once`);
+    changeVisibility: function() {
+      this.visibility = !this.visibility
     }
   }
 }
 </script>
 <template>
-  <a href.prevent="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">Link</a><br>
-  <button @click.once="alyarm">Button</button>
+  <p v-if="visibility">P1</p>
+  <p v-else>P2</p>
+  <button @click="changeVisibility">visibility = {{ visibility }}</button>
 </template>

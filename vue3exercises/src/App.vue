@@ -14,7 +14,7 @@ export default {
 };
 </script>
 <template>
-  <p :class="{ active: isValid, valid: isDisabled }">Task 1</p>
+  <p :class="{ active: isValid, valid: isDisabled }">Task1 1</p>
 </template>
 <style>
 .active {

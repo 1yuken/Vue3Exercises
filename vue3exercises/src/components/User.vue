@@ -1,12 +1,15 @@
 <script>
-	export default {
-		data() {
-			return {
-				name: 'jujuba'
-			}
-		}
-	}
+export default {
+    props: ['name', 'surn', 'age'],
+    data() {
+        return {
+        }
+    }
+}
 </script>
+
 <template>
-	{{ name }}
+   <p class="user">{{ name }}</p>
+   <p class="user">{{ surn }}</p>
+   <p class="user">{{ age }}</p>
 </template>

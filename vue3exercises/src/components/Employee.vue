@@ -6,17 +6,17 @@ export default {
         }
     },
     methods: {
-        handle() {
-            this.$emit('show');
+        handleName() {
+            this.$emit('show', 'Jujuba');
         },
-        handle1() {
-            this.$emit('show1');
-        },
+        handleSalary(){
+            this.$emit('show1', 'Capybara', '20000');
+        }
     }
 }
 </script>
 
 <template>
-<button class="button" @click="handle">jujuba</button>
-<button class="button" @click="handle1">capybara</button>
+<button class="button" @click="handleName">Name</button>
+<button class="button" @click="handleSalary">Salary</button>
 </template>

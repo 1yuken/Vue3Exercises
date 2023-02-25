@@ -1,20 +1,15 @@
 <script>
-	export default {
-	emits: ['show', 'Jujuba', '20000    '],
-	data() {
-		return {
-			arg1: 3,
-			arg2: 4
-		}
-	},
-	methods: {
-		handle() {
-		this.$emit('show', 'Jujuba', '20000');
-	}
-}
+export default {
+    emits: ['show'],
+    data() {
+        return {
+        }
+    },
+    methods: {
+    }
 }
 </script>
+
 <template>
-	
-	<button @click="handle">click</button>
+<button class="button" @click="$emit('show', 'Jujuba')">name</button>
 </template>
